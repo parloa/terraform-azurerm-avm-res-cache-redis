@@ -7,5 +7,15 @@ output "private_endpoints" {
 # https://azure.github.io/Azure-Verified-Modules/specs/terraform/#id-tffr2---category-outputs---additional-terraform-outputs
 output "resource" {
   description = "This is the full output for the resource."
-  value       = azurerm_resource_group.TODO # TODO: Replace this dummy resource azurerm_resource_group.TODO with your module resource
+  value       = azurerm_redis_cache.this
+}
+
+output "resource_id" {
+  description = "The resource id of the redis cache resource."
+  value       = azurerm_redis_cache.this.id
+}
+
+output "system_assigned_mi_principal_id" {
+  description = "The resource id for the system managed identity principal id."
+  value       = jsondecode(data.azapi_resource.this.output).identity.principalId
 }
