@@ -1,5 +1,2 @@
 * @parloa/infrastructure-platform
 
-# AVM core team owns key files
-.github/policies/ @Azure/avm-core-team-technical-terraform
-.github/CODEOWNERS @Azure/avm-core-team-technical-terraform
