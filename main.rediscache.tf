@@ -57,6 +57,10 @@ resource "azurerm_redis_cache" "this" {
     rdb_storage_connection_string           = var.redis_configuration.rdb_storage_connection_string
     storage_account_subscription_id         = var.redis_configuration.storage_account_subscription_resource_id
   }
+
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
 
